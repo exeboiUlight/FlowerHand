@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FlowerHand — Надежный анонимный чат</title>
+<!-- Шрифты -->
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Фоновые анимации */
+  body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #00ffff, transparent 70%);
+    animation: rotate 40s linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
+  /* Контейнер для контента */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* Шапка */
+  header {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  header h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+
+  header p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+  }
+
+  /* Кнопка призыва */
+  .btn-primary {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #ff85c1;
+    transform: scale(1.05);
+  }
+
+  /* Разделы */
+  section {
+    margin: 60px 0;
+  }
+
+  /* Надежность и доверие */
+  .trust-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+
+  .trust-section h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .trust-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .card:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-5px);
+  }
+
+  .card h3 {
+    margin-bottom: 15px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5em;
+  }
+
+  /* Преимущества */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .feature {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .feature h3 {
+    margin-bottom: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.4em;
+  }
+
+  /* Футер */
+  footer {
+    background: rgba(0,0,0,0.3);
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  /* Анимации и стилизация текста */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
+  }
+
+  /* Адаптивность */
+  @media(max-width: 768px){
+    .trust-cards, .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Шапка -->
+  <header>
+    <h1>🔒 Надежный Анонимный Чат 🔒</h1>
+    <p>Общайся безопасно с командой профессионалов. Мы обеспечиваем приватность и безопасность каждого пользователя. Быстро, удобно и анонимно — присоединяйся сейчас!</p>
+    <a href="FlowerHand.zip" class="btn-primary">Начать сейчас</a>
+  </header>
+
+  <!-- Раздел о доверии -->
+  <section class="trust-section">
+    <h2>Почему выбирают нас?</h2>
+    <div class="trust-cards">
+      <div class="card">
+        <h3>Проверенная команда</h3>
+        <p>Наши специалисты прошли строгую проверку и обеспечивают безопасность и надежность сервиса.</p>
+      </div>
+      <div class="card">
+        <h3>Конфиденциальность</h3>
+        <p>Мы ценим вашу приватность. Все данные защищены и не передаются третьим лицам.</p>
+      </div>
+      <div class="card">
+        <h3>Быстрый и удобный</h3>
+        <p>Общение в реальном времени с интуитивно понятным интерфейсом и высокой скоростью работы.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Раздел преимуществ -->
+  <section>
+    <h2>Наши преимущества</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Анонимность</h3>
+        <p>Общайся без раскрытия своих данных и сохраняй полную приватность.</p>
+      </div>
+      <div class="feature">
+        <h3>Безопасность</h3>
+        <p>Используем протоколы шифрования для защиты каждого сообщения.</p>
+      </div>
+      <div class="feature">
+        <h3>Удобство</h3>
+        <p>Интуитивный интерфейс и быстрый старт без регистрации.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Призыв к действию -->
+  <section style="text-align: center; margin-top: 50px;">
+    <h2>Готов начать?</h2>
+    <a href="FlowerHand.zip" class="btn-primary" style="font-size: 1.5em;">Присоединяйся сейчас</a>
+  </section>
+
+</div>
+
+<!-- Футер -->
+<footer>
+  &copy; 2024 FlowerHand. Все права защищены. <br>
+  <a href="mailto:support@flowerhand.com" style="color:#fff; text-decoration:underline;">support@flowerhand.com</a>
+</footer>
+
+</body>
+</html>
